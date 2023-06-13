@@ -152,9 +152,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           child: Column(
                             children: [
-                              Text("FUNERAL",
-                                style: TextStyle(
-                                  fontSize: 20,
+                              GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => WeddingPage()));
+                                },
+                                child: Text("FUNERAL",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                  ),
                                 ),
                               ),
 
