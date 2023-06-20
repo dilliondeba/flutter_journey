@@ -91,9 +91,9 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
 
                     TextFormField(
-                      keyboardType:TextInputType.text,
+                      keyboardType:TextInputType.phone,
                       decoration: InputDecoration(
-                          labelText: "PASSWORD",
+                          labelText: "Phone Number",
                           border: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.white,
