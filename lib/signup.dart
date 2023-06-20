@@ -26,114 +26,129 @@ class _SignUpPageState extends State<SignUpPage> {
       ),
       body: Stack(
         children: [
-          Container(height: 873,
+          Container(
+            height: 873,
             width: 500,
             child: Image.asset("assets/images/decor 1.jpg",
             fit: BoxFit.cover,
             ),
           ),
-          Form(
-              child:Center(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 20
-                    ),
-                    TextFormField(
-                      keyboardType:TextInputType.text,
-                      decoration: InputDecoration(
-                        labelText: "NAME",
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
+
+          Column(
+            children: [
+              SizedBox(
+                  height: 50
+              ),
+              Container(
+                height: 420,
+                decoration: BoxDecoration(
+                color: Colors.pinkAccent,
+              ),
+                child: Form(
+                    child:Center(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 20
                           ),
+                          TextFormField(
+                            keyboardType:TextInputType.text,
+                            decoration: InputDecoration(
+                              labelText: "NAME",
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.white,
+                                ),
 
-                        ),
-                        labelStyle: TextStyle(
-                          color: Colors.white
-                        )
-                      ),
-
-                    ),
-
-                    TextFormField(
-                      keyboardType:TextInputType.text,
-                      decoration: InputDecoration(
-                          labelText: "USERNAME",
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.white,
+                              ),
+                              labelStyle: TextStyle(
+                                color: Colors.white
+                              )
                             ),
 
                           ),
-                          labelStyle: TextStyle(
-                              color: Colors.white
-                          )
-                      ),
 
-                    ),
+                          TextFormField(
+                            keyboardType:TextInputType.text,
+                            decoration: InputDecoration(
+                                labelText: "USERNAME",
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                  ),
 
-                    TextFormField(
-                      keyboardType:TextInputType.text,
-                      decoration: InputDecoration(
-                          labelText: "EMAIL",
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.white,
+                                ),
+                                labelStyle: TextStyle(
+                                    color: Colors.white
+                                )
                             ),
 
                           ),
-                          labelStyle: TextStyle(
-                              color: Colors.white
-                          )
-                      ),
 
-                    ),
+                          TextFormField(
+                            keyboardType:TextInputType.text,
+                            decoration: InputDecoration(
+                                labelText: "EMAIL",
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                  ),
 
-                    TextFormField(
-                      keyboardType:TextInputType.phone,
-                      decoration: InputDecoration(
-                          labelText: "Phone Number",
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.white,
+                                ),
+                                labelStyle: TextStyle(
+                                    color: Colors.white
+                                )
                             ),
 
                           ),
-                          labelStyle: TextStyle(
-                              color: Colors.white
-                          )
+
+                          TextFormField(
+                            keyboardType:TextInputType.phone,
+                            decoration: InputDecoration(
+                                labelText: "Phone Number",
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                  ),
+
+                                ),
+                                labelStyle: TextStyle(
+                                    color: Colors.white
+                                )
+                            ),
+
+                          ),
+                          TextButton(
+                            onPressed:(){
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyHomePage()));
+                            },
+                            child: Text("Sign Up",
+                              style: TextStyle(
+                                color: Colors.white
+                              ),
+
+                            ),
+                            style: TextButton.styleFrom(
+                                backgroundColor: Colors.purple
+                            ),
+
+
+                          ),
+
+                          Text("Already a User ?",
+                            style: TextStyle(
+                                color: Colors.black87
+                            ),
+
+                          ),
+
+                        ],
+
                       ),
-
-                    ),
-                    TextButton(
-                      onPressed:(){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyHomePage()));
-                      },
-                      child: Text("Sign Up",
-                        style: TextStyle(
-                          color: Colors.white
-                        ),
-
-                      ),
-                      style: TextButton.styleFrom(
-                          backgroundColor: Colors.purple
-                      ),
-
-
-                    ),
-
-                    Text("Already a User ?",
-                      style: TextStyle(
-                          color: Colors.black87
-                      ),
-
-                    ),
-
-                  ],
-
+                    )
                 ),
-              )
+              ),
+            ],
           ),
 
 
